@@ -18,13 +18,14 @@ export function App() {
     
   return (
     <div>
-      <span style={{textAlign: "center"}}>
+      <h1 style={{textAlign: "center"}}>User Details</h1>
+      <span >
       <Input type="text" placeholder="Enter username" value={username} onChange={(e)=>{
         setUsername(e.target.value)
       }}></Input><br />
       <Input type="text" placeholder="Enter email" value={email} onChange={(e)=>{
         setEmail(e.target.value)
-      }}></Input>
+      }}></Input><br />
       <Button onClick={onFinish}>submit</Button>
       
     </span>
