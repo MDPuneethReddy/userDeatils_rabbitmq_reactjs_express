@@ -1,0 +1,47 @@
+{
+  "npmScope": "rabbit-mq",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "projects": {
+    "users": {
+      "tags": []
+    },
+    "users-e2e": {
+      "tags": [],
+      "implicitDependencies": ["users"]
+    },
+    "usersapi": {
+      "tags": []
+    },
+    "consumer": {
+      "tags": []
+    },
+    "userdetails": {
+      "tags": []
+    },
+    "userdetails-e2e": {
+      "tags": [],
+      "implicitDependencies": ["userdetails"]
+    }
+  }
+}
